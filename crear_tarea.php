@@ -39,5 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     Descripción de la tarea: <textarea name="descripcion" required></textarea><br> <!-- Añadido 'name="descripcion"' y 'required' -->
     <input type="submit" value="Crear Tarea">
   </form>
+  <!--se agrega link para cerrar la sesion-->
+  <a href="logout.php">Cerrar sesión</a>
 </body>
 </html>
