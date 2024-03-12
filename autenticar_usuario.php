@@ -23,12 +23,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       exit();
     } else {
       // Contraseña incorrecta, mostrar mensaje de error
-      echo "La contraseña ingresada es incorrecta.";
+      echo "<p style='color: red'>La contraseña ingresada es incorrecta.</p>";
     }
   } else {
     // Usuario no encontrado, mostrar mensaje de error
-    echo "El correo electrónico ingresado no está registrado.";
+    echo "<p style='color: red'>El correo electrónico ingresado no está registrado.</p>";
   }
 }
 ?>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Iniciar Sesión</title>
+</head>
+<body>
+  <h2>Iniciar Sesión</h2>
+  <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+    Correo electrónico: <input type="email" name="correo" required><br>
+    Contraseña: <input type="password" name="contrasena" required><br>
+    <input type="submit" value="Iniciar Sesión">
+  </form>
+</body>
+</html>
+
 

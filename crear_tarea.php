@@ -36,5 +36,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
   <h2>Crear Nueva Tarea</h2>
   <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-    Descripción de la tarea: <textarea
-
+    Descripción de la tarea: <textarea name="descripcion" required></textarea><br> <!-- Añadido 'name="descripcion"' y 'required' -->
+    <input type="submit" value="Crear Tarea">
+  </form>
+</body>
+</html>
